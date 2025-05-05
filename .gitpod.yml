@@ -1,0 +1,19 @@
+image: node:18
+
+tasks:
+  - name: Backend
+    command: |
+      cd backend
+      npm install
+      npm start
+  - name: Frontend
+    command: |
+      cd frontend
+      npm install
+      npm start
+
+ports:
+  - port: 5000
+    onOpen: open-browser
+  - port: 3000
+    onOpen: open-browser
